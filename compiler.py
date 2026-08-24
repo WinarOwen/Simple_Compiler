@@ -280,6 +280,10 @@ class Compiler:
                         return [Instr('movq',[Immediate(int),Reg('rax')]),
                                 Instr('subq',[Reg('rax'),Deref('rbp',num)])]
                     return [i]
+                case Instr('movq',[Immediate(int), Deref('rbp',num)]):
+                  if Immediate(int).value > 2 ** 16:
+                      return [Instr('movq',[Immediate(int), Reg('rax')]),
+                              Instr('movq',[Reg('rax'),Deref('rbp',num)])]
                 case _:
                     return [i]
                 
