@@ -1,6 +1,9 @@
 # Simple_Compiler
 Simple compiler based on Essentials of Compilation book
 
+## Notion notes
+[Notion](https://app.notion.com/p/Compiler-Implementation-3a0047d447e58059b9eacfa9d20e2e00?source=copy_link)
+
 ## Features
 - Addition
 - Subtraction
